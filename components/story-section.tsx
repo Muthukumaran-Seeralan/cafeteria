@@ -2,7 +2,6 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import Image from "next/image"
 
 export function StorySection() {
   const ref = useRef<HTMLDivElement>(null)
@@ -12,20 +11,22 @@ export function StorySection() {
     <section id="story" ref={ref} className="relative bg-[#0a0a0a] py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col items-center gap-16 lg:flex-row">
-          {/* Image */}
+          {/* Coffee Pouring Video */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="relative w-full overflow-hidden rounded-sm lg:w-1/2"
+            className="group relative w-full overflow-hidden rounded-sm lg:w-1/2"
           >
-            <div className="aspect-[4/3] overflow-hidden">
-              <Image
-                src="/images/hero-coffee-shop.jpg"
-                alt="Pearl Haven coffee shop interior"
-                width={800}
-                height={600}
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+            <div className="aspect-[4/3] overflow-hidden rounded-sm">
+              <video
+                src="/coffee pouring.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="h-full w-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+                style={{ objectPosition: "center" }}
               />
             </div>
           </motion.div>

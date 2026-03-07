@@ -7,6 +7,7 @@ import { HeroSection } from "@/components/hero-section"
 import { StorySection } from "@/components/story-section"
 import { SignatureDrinksSection } from "@/components/signature-drinks-section"
 import { CraftSection } from "@/components/craft-section"
+import { CoffeeMachineSection } from "@/components/coffee-machine-section"
 import { GallerySection } from "@/components/gallery-section"
 import { TestimonialSection } from "@/components/testimonial-section"
 import { CTASection } from "@/components/cta-section"
@@ -22,6 +23,7 @@ export default function Home() {
         <StorySection />
         <SignatureDrinksSection />
         <CraftSection />
+        <CoffeeMachineSection />
         <GallerySection />
         <TestimonialSection />
         <CTASection />
